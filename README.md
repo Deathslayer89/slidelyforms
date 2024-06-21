@@ -1,6 +1,10 @@
-# Slidely Forms windows App
+# Slidely Forms
 
-This project is a windows app for managing submissions. It has a backend built with Express.js and TypeScript, and a frontend built with Windows Forms.
+This project is a windows Forms app for managing submissions. It has a backend built with Express.js and TypeScript, and a frontend built with Visual Basic.
+
+# Demo
+
+[ loom(click here) ]()
 
 ## Table of Contents
 
