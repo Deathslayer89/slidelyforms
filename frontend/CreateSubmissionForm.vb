@@ -11,12 +11,12 @@ Public Class CreateSubmissionForm
         If stopwatchRunning Then
             stopwatchRunning = False
             elapsedBeforeStop += DateTime.Now - stopwatchStartTime
-            btnToggleStopwatch.Text = "START STOPWATCH"
+            btnToggleStopwatch.BackColor = SystemColors.control
             Timer1.Stop()
         Else
             stopwatchRunning = True
             stopwatchStartTime = DateTime.Now
-            btnToggleStopwatch.Text = "STOP STOPWATCH"
+            btnToggleStopwatch.BackColor = Color.DarkGray
             Timer1.Start()
         End If
     End Sub

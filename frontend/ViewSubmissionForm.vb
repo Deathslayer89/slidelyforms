@@ -10,13 +10,57 @@ Public Class ViewSubmissionsForm
     Private editingEmail As String = String.Empty
 
     ' Form load event handler
+    ' Form load event handler
     Private Async Sub ViewSubmissionsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Ensure the form receives key events first
+        Me.KeyPreview = True
         Try
             Await LoadSubmissions(currentIndex)
             DisplaySubmission()
+            ' Set focus to the form after loading data
+            SetFormFocus()
         Catch ex As Exception
             MessageBox.Show($"Error loading submissions: {ex.Message}")
         End Try
+    End Sub
+
+    ' Method to set focus to the form and ensure it can receive keyboard events
+    Private Sub SetFormFocus()
+        Me.Focus()
+        Me.Select()
+        Me.ActiveControl = Nothing
+    End Sub
+
+    ' Handle keyboard shortcuts
+    Private Sub ViewSubmissionsForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control Then
+            Select Case e.KeyCode
+                Case Keys.P
+                    If btnPrevious.Enabled AndAlso btnPrevious.Visible Then
+                        btnPrevious.PerformClick()
+                    End If
+                Case Keys.N
+                    If btnNext.Enabled AndAlso btnNext.Visible Then
+                        btnNext.PerformClick()
+                    End If
+                Case Keys.D
+                    If btnDelete.Enabled AndAlso btnDelete.Visible Then
+                        btnDelete.PerformClick()
+                    End If
+                Case Keys.E
+                    If btnEdit.Enabled AndAlso btnEdit.Visible Then
+                        btnEdit.PerformClick()
+                    End If
+                Case Keys.S
+                    If btnSave.Enabled AndAlso btnSave.Visible Then
+                        btnSave.PerformClick()
+                    End If
+                Case Keys.F
+                    If btnSearch.Enabled AndAlso btnSearch.Visible Then
+                        btnSearch.PerformClick()
+                    End If
+            End Select
+        End If
     End Sub
 
     ' Load submission from server asynchronously
@@ -77,6 +121,7 @@ Public Class ViewSubmissionsForm
             currentIndex -= 1
             DisplaySubmission()
         End If
+        SetFormFocus()
     End Sub
 
     ' Go to next submission
@@ -92,6 +137,7 @@ Public Class ViewSubmissionsForm
                 MessageBox.Show("No more submissions available or error fetching the next submission.")
             End If
         End If
+        SetFormFocus()
     End Sub
 
     ' Load the next submission from server
@@ -99,14 +145,6 @@ Public Class ViewSubmissionsForm
         Return Await LoadSubmissions(currentIndex + 1)
     End Function
 
-    ' Handle keyboard shortcuts
-    Private Sub ViewSubmissionsForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-        If e.Control AndAlso e.KeyCode = Keys.P Then
-            btnPrevious.PerformClick()
-        ElseIf e.Control AndAlso e.KeyCode = Keys.N Then
-            btnNext.PerformClick()
-        End If
-    End Sub
 
     ' Search for submission by email
     Private Async Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
@@ -139,7 +177,6 @@ Public Class ViewSubmissionsForm
         End Try
     End Sub
 
-    ' Delete current submission
     ' Delete current submission
     Private Async Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If MessageBox.Show("Are you sure you want to delete this submission?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
@@ -288,11 +325,10 @@ Public Class ViewSubmissionsForm
                 MessageBox.Show($"Error updating submission: {ex.Message}")
             End Try
         End If
+        SetFormFocus()
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
-
-
 End Class

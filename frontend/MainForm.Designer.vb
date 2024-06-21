@@ -26,7 +26,7 @@ Partial Class MainForm
         btnViewSubmissions.Name = "btnViewSubmissions"
         btnViewSubmissions.Size = New Size(200, 46)
         btnViewSubmissions.TabIndex = 0
-        btnViewSubmissions.Text = "View Submissions"
+        btnViewSubmissions.Text = "View Submissions (ctrl+v)"
         btnViewSubmissions.UseVisualStyleBackColor = False
         ' 
         ' btnCreateSubmission
@@ -40,7 +40,7 @@ Partial Class MainForm
         btnCreateSubmission.Name = "btnCreateSubmission"
         btnCreateSubmission.Size = New Size(200, 46)
         btnCreateSubmission.TabIndex = 1
-        btnCreateSubmission.Text = "Create Submission"
+        btnCreateSubmission.Text = "Create Submission (ctrl+n)"
         btnCreateSubmission.UseVisualStyleBackColor = False
         ' 
         ' lblTitle

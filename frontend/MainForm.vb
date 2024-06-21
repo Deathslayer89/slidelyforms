@@ -1,4 +1,9 @@
 ﻿Public Class MainForm
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Enable the form to receive key events before the focused control does
+        Me.KeyPreview = True
+    End Sub
+
     Private Sub btnViewSubmissions_Click(sender As Object, e As EventArgs) Handles btnViewSubmissions.Click
         Dim viewSubmissionsForm As New ViewSubmissionsForm()
         viewSubmissionsForm.ShowDialog()
@@ -15,9 +20,5 @@
         ElseIf e.Control AndAlso e.KeyCode = Keys.N Then
             btnCreateSubmission.PerformClick()
         End If
-    End Sub
-
-    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

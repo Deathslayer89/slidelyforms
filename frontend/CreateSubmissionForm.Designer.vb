@@ -10,149 +10,163 @@ Partial Class CreateSubmissionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.txtName = New System.Windows.Forms.TextBox()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.txtPhoneNum = New System.Windows.Forms.TextBox()
-        Me.txtGithubLink = New System.Windows.Forms.TextBox()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.lblEmail = New System.Windows.Forms.Label()
-        Me.lblPhoneNum = New System.Windows.Forms.Label()
-        Me.lblGithubLink = New System.Windows.Forms.Label()
-        Me.lblStopwatch = New System.Windows.Forms.Label()
-        Me.btnToggleStopwatch = New System.Windows.Forms.Button()
-        Me.btnSubmit = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer()
-        Me.SuspendLayout()
-        '
-        'txtName
-        '
-        Me.txtName.Location = New System.Drawing.Point(150, 30)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(200, 20)
-        Me.txtName.TabIndex = 0
-        '
-        'txtEmail
-        '
-        Me.txtEmail.Location = New System.Drawing.Point(150, 60)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(200, 20)
-        Me.txtEmail.TabIndex = 1
-        '
-        'txtPhoneNum
-        '
-        Me.txtPhoneNum.Location = New System.Drawing.Point(150, 90)
-        Me.txtPhoneNum.Name = "txtPhoneNum"
-        Me.txtPhoneNum.Size = New System.Drawing.Size(200, 20)
-        Me.txtPhoneNum.TabIndex = 2
-        '
-        'txtGithubLink
-        '
-        Me.txtGithubLink.Location = New System.Drawing.Point(150, 120)
-        Me.txtGithubLink.Name = "txtGithubLink"
-        Me.txtGithubLink.Size = New System.Drawing.Size(200, 20)
-        Me.txtGithubLink.TabIndex = 3
-        '
-        'lblName
-        '
-        Me.lblName.AutoSize = True
-        Me.lblName.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
-        Me.lblName.Location = New System.Drawing.Point(30, 30)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(38, 13)
-        Me.lblName.TabIndex = 4
-        Me.lblName.Text = "Name:"
-        '
-        'lblEmail
-        '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
-        Me.lblEmail.Location = New System.Drawing.Point(30, 60)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(35, 13)
-        Me.lblEmail.TabIndex = 5
-        Me.lblEmail.Text = "Email:"
-        '
-        'lblPhoneNum
-        '
-        Me.lblPhoneNum.AutoSize = True
-        Me.lblPhoneNum.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
-        Me.lblPhoneNum.Location = New System.Drawing.Point(30, 90)
-        Me.lblPhoneNum.Name = "lblPhoneNum"
-        Me.lblPhoneNum.Size = New System.Drawing.Size(67, 13)
-        Me.lblPhoneNum.TabIndex = 6
-        Me.lblPhoneNum.Text = "Phone Num:"
-        '
-        'lblGithubLink
-        '
-        Me.lblGithubLink.AutoSize = True
-        Me.lblGithubLink.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
-        Me.lblGithubLink.Location = New System.Drawing.Point(30, 120)
-        Me.lblGithubLink.Name = "lblGithubLink"
-        Me.lblGithubLink.Size = New System.Drawing.Size(109, 13)
-        Me.lblGithubLink.TabIndex = 7
-        Me.lblGithubLink.Text = "GitHub Link For Task:"
-        '
-        'lblStopwatch
-        '
-        Me.lblStopwatch.AutoSize = True
-        Me.lblStopwatch.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
-        Me.lblStopwatch.Location = New System.Drawing.Point(150, 150)
-        Me.lblStopwatch.Name = "lblStopwatch"
-        Me.lblStopwatch.Size = New System.Drawing.Size(49, 13)
-        Me.lblStopwatch.TabIndex = 8
-        Me.lblStopwatch.Text = "00:00:00"
-        '
-        'btnToggleStopwatch
-        '
-        Me.btnToggleStopwatch.BackColor = Color.White
-        Me.btnToggleStopwatch.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
-        Me.btnToggleStopwatch.FlatStyle = FlatStyle.Flat
-        Me.btnToggleStopwatch.FlatAppearance.BorderSize = 1
-        Me.btnToggleStopwatch.FlatAppearance.BorderColor = Color.FromArgb(255, 165, 0) ' Orange border color
-        Me.btnToggleStopwatch.Location = New System.Drawing.Point(30, 170)
-        Me.btnToggleStopwatch.Name = "btnToggleStopwatch"
-        Me.btnToggleStopwatch.Size = New System.Drawing.Size(120, 30)
-        Me.btnToggleStopwatch.TabIndex = 9
-        Me.btnToggleStopwatch.Text = "Toggle Stopwatch"
-        Me.btnToggleStopwatch.UseVisualStyleBackColor = False
-        '
-        'btnSubmit
-        '
-        Me.btnSubmit.BackColor = Color.White
-        Me.btnSubmit.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
-        Me.btnSubmit.FlatStyle = FlatStyle.Flat
-        Me.btnSubmit.FlatAppearance.BorderSize = 1
-        Me.btnSubmit.FlatAppearance.BorderColor = Color.FromArgb(255, 165, 0) ' Orange border color
-        Me.btnSubmit.Location = New System.Drawing.Point(230, 170)
-        Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(120, 30)
-        Me.btnSubmit.TabIndex = 10
-        Me.btnSubmit.Text = "Submit"
-        Me.btnSubmit.UseVisualStyleBackColor = False
-        '
-        'CreateSubmissionForm
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(400, 250)
-        Me.Controls.Add(Me.btnSubmit)
-        Me.Controls.Add(Me.btnToggleStopwatch)
-        Me.Controls.Add(Me.lblStopwatch)
-        Me.Controls.Add(Me.lblGithubLink)
-        Me.Controls.Add(Me.lblPhoneNum)
-        Me.Controls.Add(Me.lblEmail)
-        Me.Controls.Add(Me.lblName)
-        Me.Controls.Add(Me.txtGithubLink)
-        Me.Controls.Add(Me.txtPhoneNum)
-        Me.Controls.Add(Me.txtEmail)
-        Me.Controls.Add(Me.txtName)
-        Me.BackColor = Color.WhiteSmoke
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Name = "CreateSubmissionForm"
-        Me.Text = "Create Submission"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        components = New ComponentModel.Container()
+        txtName = New TextBox()
+        txtEmail = New TextBox()
+        txtPhoneNum = New TextBox()
+        txtGithubLink = New TextBox()
+        lblName = New Label()
+        lblEmail = New Label()
+        lblPhoneNum = New Label()
+        lblGithubLink = New Label()
+        lblStopwatch = New Label()
+        btnToggleStopwatch = New Button()
+        btnSubmit = New Button()
+        Timer1 = New Timer(components)
+        SuspendLayout()
+        ' 
+        ' txtName
+        ' 
+        txtName.Location = New Point(200, 46)
+        txtName.Margin = New Padding(4, 5, 4, 5)
+        txtName.Name = "txtName"
+        txtName.Size = New Size(265, 27)
+        txtName.TabIndex = 0
+        ' 
+        ' txtEmail
+        ' 
+        txtEmail.Location = New Point(200, 92)
+        txtEmail.Margin = New Padding(4, 5, 4, 5)
+        txtEmail.Name = "txtEmail"
+        txtEmail.Size = New Size(265, 27)
+        txtEmail.TabIndex = 1
+        ' 
+        ' txtPhoneNum
+        ' 
+        txtPhoneNum.Location = New Point(200, 138)
+        txtPhoneNum.Margin = New Padding(4, 5, 4, 5)
+        txtPhoneNum.Name = "txtPhoneNum"
+        txtPhoneNum.Size = New Size(265, 27)
+        txtPhoneNum.TabIndex = 2
+        ' 
+        ' txtGithubLink
+        ' 
+        txtGithubLink.Location = New Point(200, 185)
+        txtGithubLink.Margin = New Padding(4, 5, 4, 5)
+        txtGithubLink.Name = "txtGithubLink"
+        txtGithubLink.Size = New Size(265, 27)
+        txtGithubLink.TabIndex = 3
+        ' 
+        ' lblName
+        ' 
+        lblName.AutoSize = True
+        lblName.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        lblName.Location = New Point(40, 46)
+        lblName.Margin = New Padding(4, 0, 4, 0)
+        lblName.Name = "lblName"
+        lblName.Size = New Size(52, 20)
+        lblName.TabIndex = 4
+        lblName.Text = "Name:"
+        ' 
+        ' lblEmail
+        ' 
+        lblEmail.AutoSize = True
+        lblEmail.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        lblEmail.Location = New Point(40, 92)
+        lblEmail.Margin = New Padding(4, 0, 4, 0)
+        lblEmail.Name = "lblEmail"
+        lblEmail.Size = New Size(49, 20)
+        lblEmail.TabIndex = 5
+        lblEmail.Text = "Email:"
+        ' 
+        ' lblPhoneNum
+        ' 
+        lblPhoneNum.AutoSize = True
+        lblPhoneNum.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        lblPhoneNum.Location = New Point(40, 138)
+        lblPhoneNum.Margin = New Padding(4, 0, 4, 0)
+        lblPhoneNum.Name = "lblPhoneNum"
+        lblPhoneNum.Size = New Size(89, 20)
+        lblPhoneNum.TabIndex = 6
+        lblPhoneNum.Text = "Phone Num:"
+        ' 
+        ' lblGithubLink
+        ' 
+        lblGithubLink.AutoSize = True
+        lblGithubLink.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        lblGithubLink.Location = New Point(40, 185)
+        lblGithubLink.Margin = New Padding(4, 0, 4, 0)
+        lblGithubLink.Name = "lblGithubLink"
+        lblGithubLink.Size = New Size(145, 20)
+        lblGithubLink.TabIndex = 7
+        lblGithubLink.Text = "GitHub Link For Task:"
+        ' 
+        ' lblStopwatch
+        ' 
+        lblStopwatch.AutoSize = True
+        lblStopwatch.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        lblStopwatch.Location = New Point(200, 231)
+        lblStopwatch.Margin = New Padding(4, 0, 4, 0)
+        lblStopwatch.Name = "lblStopwatch"
+        lblStopwatch.Size = New Size(63, 20)
+        lblStopwatch.TabIndex = 8
+        lblStopwatch.Text = "00:00:00"
+        ' 
+        ' btnToggleStopwatch
+        ' 
+        btnToggleStopwatch.BackColor = Color.White
+        btnToggleStopwatch.FlatAppearance.BorderColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        btnToggleStopwatch.FlatStyle = FlatStyle.Flat
+        btnToggleStopwatch.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        btnToggleStopwatch.Location = New Point(40, 262)
+        btnToggleStopwatch.Margin = New Padding(4, 5, 4, 5)
+        btnToggleStopwatch.Name = "btnToggleStopwatch"
+        btnToggleStopwatch.Size = New Size(163, 71)
+        btnToggleStopwatch.TabIndex = 9
+        btnToggleStopwatch.Text = "Toggle Stopwatch (ctrl+T)"
+        btnToggleStopwatch.UseVisualStyleBackColor = False
+        ' 
+        ' btnSubmit
+        ' 
+        btnSubmit.BackColor = Color.White
+        btnSubmit.FlatAppearance.BorderColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        btnSubmit.FlatStyle = FlatStyle.Flat
+        btnSubmit.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        btnSubmit.Location = New Point(307, 262)
+        btnSubmit.Margin = New Padding(4, 5, 4, 5)
+        btnSubmit.Name = "btnSubmit"
+        btnSubmit.Size = New Size(169, 71)
+        btnSubmit.TabIndex = 10
+        btnSubmit.Text = "Submit (ctrl+S)"
+        btnSubmit.UseVisualStyleBackColor = False
+        ' 
+        ' Timer1
+        ' 
+        ' 
+        ' CreateSubmissionForm
+        ' 
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.WhiteSmoke
+        ClientSize = New Size(1176, 532)
+        Controls.Add(btnSubmit)
+        Controls.Add(btnToggleStopwatch)
+        Controls.Add(lblStopwatch)
+        Controls.Add(lblGithubLink)
+        Controls.Add(lblPhoneNum)
+        Controls.Add(lblEmail)
+        Controls.Add(lblName)
+        Controls.Add(txtGithubLink)
+        Controls.Add(txtPhoneNum)
+        Controls.Add(txtEmail)
+        Controls.Add(txtName)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        Margin = New Padding(4, 5, 4, 5)
+        Name = "CreateSubmissionForm"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Create Submission"
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 

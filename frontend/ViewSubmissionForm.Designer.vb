@@ -154,9 +154,9 @@ Partial Class ViewSubmissionsForm
         btnPrevious.Location = New Point(40, 308)
         btnPrevious.Margin = New Padding(4, 5, 4, 5)
         btnPrevious.Name = "btnPrevious"
-        btnPrevious.Size = New Size(100, 46)
+        btnPrevious.Size = New Size(145, 59)
         btnPrevious.TabIndex = 10
-        btnPrevious.Text = "PREVIOUS"
+        btnPrevious.Text = "PREVIOUS (ctrl+P)"
         btnPrevious.UseVisualStyleBackColor = False
         ' 
         ' btnNext
@@ -166,9 +166,9 @@ Partial Class ViewSubmissionsForm
         btnNext.Location = New Point(356, 308)
         btnNext.Margin = New Padding(4, 5, 4, 5)
         btnNext.Name = "btnNext"
-        btnNext.Size = New Size(100, 46)
+        btnNext.Size = New Size(133, 59)
         btnNext.TabIndex = 11
-        btnNext.Text = "NEXT"
+        btnNext.Text = "NEXT (ctrl+N)"
         btnNext.UseVisualStyleBackColor = False
         ' 
         ' btnSearch
@@ -178,9 +178,9 @@ Partial Class ViewSubmissionsForm
         btnSearch.Location = New Point(186, 493)
         btnSearch.Margin = New Padding(4, 5, 4, 5)
         btnSearch.Name = "btnSearch"
-        btnSearch.Size = New Size(100, 46)
+        btnSearch.Size = New Size(141, 46)
         btnSearch.TabIndex = 12
-        btnSearch.Text = "SEARCH"
+        btnSearch.Text = "SEARCH (ctrl+F)"
         btnSearch.UseVisualStyleBackColor = False
         ' 
         ' btnDelete
@@ -190,9 +190,9 @@ Partial Class ViewSubmissionsForm
         btnDelete.Location = New Point(573, 66)
         btnDelete.Margin = New Padding(4, 5, 4, 5)
         btnDelete.Name = "btnDelete"
-        btnDelete.Size = New Size(100, 46)
+        btnDelete.Size = New Size(145, 46)
         btnDelete.TabIndex = 13
-        btnDelete.Text = "DELETE"
+        btnDelete.Text = "DELETE (ctrl+D)"
         btnDelete.UseVisualStyleBackColor = False
         ' 
         ' btnEdit
@@ -202,9 +202,9 @@ Partial Class ViewSubmissionsForm
         btnEdit.Location = New Point(573, 125)
         btnEdit.Margin = New Padding(4, 5, 4, 5)
         btnEdit.Name = "btnEdit"
-        btnEdit.Size = New Size(100, 46)
+        btnEdit.Size = New Size(145, 40)
         btnEdit.TabIndex = 14
-        btnEdit.Text = "EDIT"
+        btnEdit.Text = "EDIT (ctrl+E)"
         btnEdit.UseVisualStyleBackColor = False
         ' 
         ' lblSearchEmail
@@ -234,9 +234,9 @@ Partial Class ViewSubmissionsForm
         btnSave.Location = New Point(573, 194)
         btnSave.Margin = New Padding(4, 5, 4, 5)
         btnSave.Name = "btnSave"
-        btnSave.Size = New Size(100, 46)
+        btnSave.Size = New Size(145, 46)
         btnSave.TabIndex = 17
-        btnSave.Text = "SAVE"
+        btnSave.Text = "SAVE (ctrl+S)"
         btnSave.UseVisualStyleBackColor = False
         btnSave.Visible = False
         ' 
@@ -263,6 +263,7 @@ Partial Class ViewSubmissionsForm
         Controls.Add(lblPhoneNum)
         Controls.Add(lblEmail)
         Controls.Add(lblName)
+        KeyPreview = True
         Margin = New Padding(4, 5, 4, 5)
         Name = "ViewSubmissionsForm"
         Text = "View Submissions"
