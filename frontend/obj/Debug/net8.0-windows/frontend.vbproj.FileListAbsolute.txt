@@ -19,3 +19,4 @@ C:\Users\dines\programming\projects\google-forms-clone-backend\frontend\obj\Debu
 C:\Users\dines\programming\projects\google-forms-clone-backend\frontend\obj\Debug\net8.0-windows\frontend.pdb
 C:\Users\dines\programming\projects\google-forms-clone-backend\frontend\obj\Debug\net8.0-windows\frontend.genruntimeconfig.cache
 C:\Users\dines\programming\projects\google-forms-clone-backend\frontend\obj\Debug\net8.0-windows\ref\frontend.dll
+C:\Users\dines\programming\projects\google-forms-clone-backend\frontend\obj\Debug\net8.0-windows\frontend.sourcelink.json

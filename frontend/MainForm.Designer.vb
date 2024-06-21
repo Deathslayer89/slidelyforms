@@ -18,11 +18,10 @@ Partial Class MainForm
         ' btnViewSubmissions
         ' 
         btnViewSubmissions.BackColor = Color.White
-        btnViewSubmissions.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
+        btnViewSubmissions.FlatAppearance.BorderColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
         btnViewSubmissions.FlatStyle = FlatStyle.Flat
-        btnViewSubmissions.FlatAppearance.BorderSize = 1
-        btnViewSubmissions.FlatAppearance.BorderColor = Color.FromArgb(255, 165, 0) ' Orange border color
-        btnViewSubmissions.Location = New Point(67, 100)
+        btnViewSubmissions.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        btnViewSubmissions.Location = New Point(569, 201)
         btnViewSubmissions.Margin = New Padding(4, 5, 4, 5)
         btnViewSubmissions.Name = "btnViewSubmissions"
         btnViewSubmissions.Size = New Size(200, 46)
@@ -33,11 +32,10 @@ Partial Class MainForm
         ' btnCreateSubmission
         ' 
         btnCreateSubmission.BackColor = Color.White
-        btnCreateSubmission.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
+        btnCreateSubmission.FlatAppearance.BorderColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
         btnCreateSubmission.FlatStyle = FlatStyle.Flat
-        btnCreateSubmission.FlatAppearance.BorderSize = 1
-        btnCreateSubmission.FlatAppearance.BorderColor = Color.FromArgb(255, 165, 0) ' Orange border color
-        btnCreateSubmission.Location = New Point(67, 180)
+        btnCreateSubmission.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        btnCreateSubmission.Location = New Point(569, 365)
         btnCreateSubmission.Margin = New Padding(4, 5, 4, 5)
         btnCreateSubmission.Name = "btnCreateSubmission"
         btnCreateSubmission.Size = New Size(200, 46)
@@ -48,27 +46,27 @@ Partial Class MainForm
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
-        lblTitle.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
-        lblTitle.ForeColor = Color.FromArgb(255, 165, 0) ' Orange color
-        lblTitle.Location = New Point(50, 30)
+        lblTitle.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
+        lblTitle.ForeColor = Color.FromArgb(CByte(255), CByte(165), CByte(0))
+        lblTitle.Location = New Point(512, 93)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(233, 32)
+        lblTitle.Size = New Size(313, 41)
         lblTitle.TabIndex = 2
         lblTitle.Text = "Submission Manager"
         ' 
         ' MainForm
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(333, 308)
+        BackColor = Color.WhiteSmoke
+        ClientSize = New Size(1422, 591)
         Controls.Add(lblTitle)
         Controls.Add(btnCreateSubmission)
         Controls.Add(btnViewSubmissions)
-        BackColor = Color.WhiteSmoke
         FormBorderStyle = FormBorderStyle.FixedDialog
-        StartPosition = FormStartPosition.CenterScreen
         Margin = New Padding(4, 5, 4, 5)
         Name = "MainForm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Slidely Form App"
         ResumeLayout(False)
         PerformLayout()
