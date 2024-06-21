@@ -4,7 +4,7 @@ This project is a windows Forms app for managing submissions. It has a backend b
 
 # Demo
 
-[ loom(click here) ]()
+[ loom(click here) ](https://www.loom.com/share/abc63bca909d4e1b89e72e56dc064170?sid=a12305b2-1fec-4e21-a35f-cc704b972d08)
 
 ## Table of Contents
 
@@ -138,12 +138,9 @@ true
    ```
 
 ### Frontend Installation
-> **open the folder frontend using visual studio and then run the project**
+> **open the solution frontend using visual studio and then run the project**
 ```sh
  cd frontend
 ```
 
 
-# Demo
-
-[ loom(click here) ]()
