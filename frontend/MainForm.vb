@@ -10,32 +10,10 @@ Public Class MainForm
         ' Enable the form to receive key events before the focused control does
         Me.KeyPreview = True
 
-        ' Initialize and start the ping timer
-        AddHandler pingTimer.Tick, AddressOf PingTimer_Tick
-        pingTimer.Interval = 300000 ' 5 minutes in milliseconds
-        pingTimer.Start()
     End Sub
 
-    Private Async Sub PingTimer_Tick(sender As Object, e As EventArgs)
-        Try
-            Await PingBackend()
-        Catch ex As Exception
-            ' Handle any errors, e.g., log or display an error message
-            Debug.WriteLine($"Error pinging backend: {ex.Message}")
-        End Try
-    End Sub
 
-    Private Async Function PingBackend() As Task
-        Dim pingUrl As String = "https://your-backend-url/api/ping" ' Replace with your actual ping endpoint
-        Dim response As HttpResponseMessage = Await httpClient.GetAsync(pingUrl)
 
-        If response.IsSuccessStatusCode Then
-            Dim responseContent As String = Await response.Content.ReadAsStringAsync()
-            Debug.WriteLine($"Ping successful at {DateTime.Now}: {responseContent}")
-        Else
-            Debug.WriteLine($"Ping failed with status code: {response.StatusCode}")
-        End If
-    End Function
 
     Private Sub btnViewSubmissions_Click(sender As Object, e As EventArgs) Handles btnViewSubmissions.Click
         Dim viewSubmissionsForm As New ViewSubmissionsForm()

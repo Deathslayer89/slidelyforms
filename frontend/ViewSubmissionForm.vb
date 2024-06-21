@@ -10,7 +10,6 @@ Public Class ViewSubmissionsForm
     Private editingEmail As String = String.Empty
 
     ' Form load event handler
-    ' Form load event handler
     Private Async Sub ViewSubmissionsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Ensure the form receives key events first
         Me.KeyPreview = True
@@ -267,12 +266,12 @@ Public Class ViewSubmissionsForm
 
         ' Toggle visibility of Save button
         btnSave.Visible = enable
-        btnEdit.Visible = Not enable ' Hide Edit button when editing
-        btnNext.Enabled = Not enable ' Disable Next button when editing
-        btnPrevious.Enabled = Not enable ' Disable Previous button when editing
-        btnSearch.Enabled = Not enable ' Disable Search button when editing
-        btnDelete.Enabled = Not enable ' Disable Delete button when editing
-        txtSearchEmail.ReadOnly = enable ' Allow search during editing
+        btnEdit.Visible = Not enable
+        btnNext.Enabled = Not enable
+        btnPrevious.Enabled = Not enable
+        btnSearch.Enabled = Not enable
+        btnDelete.Enabled = Not enable
+        txtSearchEmail.ReadOnly = enable
 
         ' Set focus to the first editable field
         If enable Then
@@ -285,7 +284,6 @@ Public Class ViewSubmissionsForm
     ' Save edited submission
     Private Async Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If MessageBox.Show("Are you sure you want to save these changes?", "Confirm Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-            ' Validate fields (if needed)
 
             ' Prepare updated submission
             Dim updatedSubmission As New JObject()
@@ -315,8 +313,8 @@ Public Class ViewSubmissionsForm
                         currentSubmission("github_link") = updatedSubmission("github_link").ToString()
                         currentSubmission("stopwatch_time") = updatedSubmission("stopwatch_time").ToString()
 
-                        EnableEditing(False) ' Disable editing mode
-                        DisplaySubmission() ' Display the updated submission
+                        EnableEditing(False)
+                        DisplaySubmission()
                     Else
                         MessageBox.Show("Failed to update submission.")
                     End If
@@ -328,7 +326,5 @@ Public Class ViewSubmissionsForm
         SetFormFocus()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
-    End Sub
 End Class
